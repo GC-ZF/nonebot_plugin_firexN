@@ -26,8 +26,9 @@
 **避免尴尬，从我做起，一起燚xN吧**
 
 <div align="center">
-  <img height="300px" src="https://test1.jsdelivr.net/gh/GC-ZF/nonebot-plugin-firexN/example.png">
+  <img height="300px" src="https://test1.jsdelivr.net/gh/GC-ZF/nonebot_plugin_firexN/example.png">
 </div>
+
 
 定时早晚各发一条信息(以防早上忘记回复,晚上还有第二次提醒),默认调用[API](https://v1.hitokoto.cn?c=a&c=b&c=c&c=d&c=h)随机发送一句,也可以自定义发送消息的内容及时间。当然如果你愿意花一些心思去读代码,此插件还可以改成你需要的定时提醒工具(再加几个定时器,喝水小助手不就有了么！)
 
