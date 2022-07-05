@@ -31,7 +31,7 @@
 
 定时早晚各发一条信息(以防早上忘记回复,晚上还有第二次提醒),默认调用[API](https://v1.hitokoto.cn?c=a&c=b&c=c&c=d&c=h)随机发送一句,也可以自定义发送消息的内容及时间。当然如果你愿意花一些心思去读代码,此插件还可以改成你需要的定时提醒工具(再加几个定时器,喝水小助手不就有了么！)
 
-本人未系统学习过py,靠仅有的cpp和py的一点点理解制作的,如果有任何问题、建议,欢迎[issues](https://github.com/GC-ZF/nonebot-plugin-firexN/issues)
+本人未系统学习过py,靠仅有的cpp和py的一点点理解制作的,如果有任何问题、建议,欢迎[issues](https://github.com/GC-ZF/nonebot_plugin_firexN/issues)
 
 ## 依赖
 本插件依赖[定时任务](https://github.com/nonebot/plugin-apscheduler),首先确保自己有`nonebot_plugin_apscheduler`(pip list查看),安装命令
