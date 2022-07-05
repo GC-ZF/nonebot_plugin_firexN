@@ -3,8 +3,7 @@
 </p>
 
 <div align="center">
-
-<h1 align="center">🔥 nonebot-plugin-firexN</h1>
+<h1 align="center">🔥 nonebot_plugin_firexN</h1>
 
 ✨ 定时发送QQ消息插件 ✨
 
@@ -24,7 +23,7 @@
 
 一款基于[Nonebot2](https://github.com/nonebot/nonebot2)的插件
 
-**避免尴尬，从我做起**
+**避免尴尬，从我做起，一起燚xN吧**
 
 <div align="center">
   <img height="300px" src="https://test1.jsdelivr.net/gh/GC-ZF/nonebot-plugin-firexN/example.png">
@@ -46,7 +45,7 @@ pip install nonebot_plugin_firexN
 ## 配置项
 在`bot.py`中添加
 ```python
-nonebot.load_plugin("nonebot-plugin-firexN")
+nonebot.load_plugin("nonebot_plugin_firexN")
 ```
 在`.evn`中配置参数说明
 ```python
