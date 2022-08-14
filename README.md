@@ -16,8 +16,8 @@
   <a href="https://pypi.python.org/pypi/nonebot_plugin_firexN">
     <img src="https://img.shields.io/pypi/v/nonebot_plugin_firexN" alt="pypi">
   </a>
-  <img  src="https://visitor-badge.glitch.me/badge?page_id=nonebot_plugin_firexN" />
-  <img src="https://img.shields.io/badge/python-3.7.3+-blue" alt="python"><br />
+  <img src="https://img.shields.io/badge/python-3.7.3+-blue" alt="python">
+  <img  src="https://visitor-badge.glitch.me/badge?page_id=nonebot_plugin_firexN" /><br />
 </p></br>
 
 ## 插件描述
