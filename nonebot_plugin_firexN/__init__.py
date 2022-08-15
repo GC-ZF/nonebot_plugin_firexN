@@ -8,6 +8,8 @@ nonebot_plugin_firexN
 额外依赖pip install nonebot_plugin_apscheduler
 需要在.evn中配置:
       fire_users = ["xxx","xxx"]    # 必填 联系人QQ
+      fire_switch_morning = False   # 选填 True/False 默认开启 早上消息推送是否开启
+      fire_switch_night = False     # 选填 True/False 默认开启 晚上消息推送是否开启
       fire_mode = 1                 # 必填 模式1发送自定义句子，模式2随机调用一句
       fire_sentence_moring = ["句子1","句子2","..."]    # 如果是模式1 此项必填，早上随机发送该字段中的一句
       fire_sentence_night = ["句子1","句子2","..."]     # 如果是模式1 此项必填，晚上随机发送该字段中的一句
@@ -122,7 +124,7 @@ async def fire_morning():
 async def fire_night():
     # 如果False直接退出函数
     if not fire_switch_night:
-        logger.info ( "fire_morning关闭，跳出函数" )
+        logger.info ( "fire_night关闭，跳出函数" )
         return
     sendSuccess = False
     while not sendSuccess:
