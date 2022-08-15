@@ -52,7 +52,9 @@ nonebot.load_plugin("nonebot_plugin_firexN")
 在`.evn`中配置参数说明
 ```python
 fire_users = ["xxx","xxx"]    # 必填 联系人QQ
-fire_mode = 1                 # 必填 模式1发送自定义句子，模式2随机调用一句
+fire_switch_morning = False   # 选填 True/False 默认开启 早上消息推送是否开启
+fire_switch_night = False     # 选填 True/False 默认开启 晚上消息推送是否开启
+fire_mode = 1                 # 选填 默认模式2 模式1发送自定义句子，模式2随机调用一句
 fire_sentence_moring = ["句子1","句子2","..."]    # 如果是模式1 此项必填，早上随机发送该字段中的一句
 fire_sentence_night = ["句子1","句子2","..."]     # 如果是模式1 此项必填，晚上随机发送该字段中的一句
 fire_time_moring = "8 0"    # 选填 早上发送时间默认为7:00
@@ -62,7 +64,7 @@ fire_time_night = "23 0"    # 选填 晚上发送时间默认为22:00
 模式1
 ```python
 fire_users = ["1310446718","2689438597"]    # 必填 联系人QQ
-fire_switch_morning = False   # 选填 True/False 默认开启 早上消息推送是否开启
+fire_switch_morning = True    # 选填 True/False 默认开启 早上消息推送是否开启
 fire_switch_night = False     # 选填 True/False 默认开启 晚上消息推送是否开启
 fire_mode = 1                 # 选填 默认模式2 模式1发送自定义句子，模式2随机调用一句
 fire_sentence_moring = ["🌞早，又是元气满满的一天","句子2","..."]    # 如果是模式1 此项必填，早上随机发送该字段中的一句
@@ -77,7 +79,7 @@ fire_mode = 2                 # 必填 模式1发送自定义句子，模式2随
 ```
 ## 补充
 本插件的初衷是续火花而不是群聊定时推送，所以pip安装并没有群聊功能，如果需要你可以将仓库中`send_msg.py`，保存到在`[nb根目录]/plugins/group/send_msg.py`中
-在`.evn`中配置参数说明
+在`.evn`中配置参数说明，之后重启.py。
 ```python
 send_group_id = ["xxx","xxx"]    # 必填 群号
 send_switch_morning = False                      # 选填 True/False 默认开启 早上消息推送是否开启
@@ -87,4 +89,12 @@ send_sentence_moring = ["句子1","句子2","..."]    # 如果是模式1 此项�
 send_sentence_night = ["句子1","句子2","..."]     # 如果是模式1 此项必填，晚上随机发送该字段中的一句
 send_time_moring = "8 0"    # 选填 早上发送时间默认为7:00
 send_time_night = "23 0"    # 选填 晚上发送时间默认为22:00                   
+```
+因此功能不属于本插件，另外推荐一款群管插件[yzyyz1387/nonebot_plugin_admin](https://github.com/yzyyz1387/nonebot_plugin_admin)，群聊定时推送功能已向作者提交合并申请。
+## 更新记录
+2022.8.15，新增消息推送开关，更改fire_mode为选填，默认模式2
+```
+fire_switch_morning = True    # 选填 True/False 默认开启 早上消息推送是否开启
+fire_switch_night = False     # 选填 True/False 默认开启 晚上消息推送是否开启
+fire_mode = 1                 # 选填 默认模式2 模式1发送自定义句子，模式2随机调用一句
 ```
