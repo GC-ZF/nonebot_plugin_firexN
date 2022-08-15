@@ -51,6 +51,16 @@ except Exception as e:
     logger.error ( "ValueError:{}", e )
     logger.error ( "请配置fire_user_id" )
 
+# 开关 默认全开
+try:
+    fire_switch_morning = get_driver ().config.fire_switch_morning
+except (AttributeError, AssertionError):
+    fire_switch_morning = True
+try:
+    fire_switch_night = get_driver ().config.fire_switch_night
+except (AttributeError, AssertionError):
+    fire_switch_night = True
+
 # 获取模式 如果是模式1就读取自定义句子，模式2使用API
 fire_mode = get_driver ().config.fire_mode
 if fire_mode == 1:
@@ -86,6 +96,10 @@ def hitokoto():
 
 
 async def fire_morning():
+    # 如果False直接退出函数
+    if not fire_switch_morning:
+        logger.info ( "fire_morning关闭，跳出函数" )
+        return
     sendSuccess = False
     while not sendSuccess:
         try:
@@ -106,6 +120,10 @@ async def fire_morning():
 
 
 async def fire_night():
+    # 如果False直接退出函数
+    if not fire_switch_night:
+        logger.info ( "fire_morning关闭，跳出函数" )
+        return
     sendSuccess = False
     while not sendSuccess:
         try:
