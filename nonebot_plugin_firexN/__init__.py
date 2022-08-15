@@ -100,7 +100,7 @@ def hitokoto():
 async def fire_morning():
     # 如果False直接退出函数
     if not fire_switch_morning:
-        logger.info ( "fire_morning关闭，跳出函数" )
+        logger.info ( "fire_morning()关闭，跳出函数" )
         return
     sendSuccess = False
     while not sendSuccess:
@@ -124,7 +124,7 @@ async def fire_morning():
 async def fire_night():
     # 如果False直接退出函数
     if not fire_switch_night:
-        logger.info ( "fire_night关闭，跳出函数" )
+        logger.info ( "fire_night()关闭，跳出函数" )
         return
     sendSuccess = False
     while not sendSuccess:
