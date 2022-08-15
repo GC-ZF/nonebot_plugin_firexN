@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8", errors="ignore") as fh:
 
 setup(
     name='nonebot_plugin_firexN',      #这里是pip项目发布的名称
-    version='0.1.5',  #版本号，数值大的会优先被pip
+    version='0.1.6',  #版本号，数值大的会优先被pip
     keywords = ["pip", "nonebot2", "nonebot", "fire", "nonebot_plugin"],
     description = "nonebot plugin firexN",
     long_description = long_description,
