@@ -10,7 +10,7 @@ nonebot_plugin_firexN
       fire_users = ["xxx","xxx"]    # 必填 联系人QQ
       fire_switch_morning = False   # 选填 True/False 默认开启 早上消息推送是否开启
       fire_switch_night = False     # 选填 True/False 默认开启 晚上消息推送是否开启
-      fire_mode = 1                 # 必填 模式1发送自定义句子，模式2随机调用一句
+      fire_mode = 1                 # 选填 默认模式2 模式1发送自定义句子，模式2随机调用一句
       fire_sentence_moring = ["句子1","句子2","..."]    # 如果是模式1 此项必填，早上随机发送该字段中的一句
       fire_sentence_night = ["句子1","句子2","..."]     # 如果是模式1 此项必填，晚上随机发送该字段中的一句
       fire_time_moring = "8 0"    # 选填 早上发送时间默认为7:00
@@ -63,8 +63,11 @@ try:
 except (AttributeError, AssertionError):
     fire_switch_night = True
 
-# 获取模式 如果是模式1就读取自定义句子，模式2使用API
-fire_mode = get_driver ().config.fire_mode
+# 获取模式 默认模式2 如果是模式1就读取自定义句子，模式2使用API
+try:
+    fire_mode = get_driver ().config.fire_mode
+except (AttributeError, AssertionError):
+    fire_mode = 2
 if fire_mode == 1:
     fire_sentence_moring = get_driver ().config.fire_sentence_moring
     fire_sentence_night = get_driver ().config.fire_sentence_night
