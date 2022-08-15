@@ -34,7 +34,7 @@ body:
   - type: input
     id: website
     attributes:
-      label: 出现问题的QQ | Website
+      label: 出现问题的QQ | QQ
       description: 请提供可以复现问题的机器人QQ | Please supply a QQ number which can reproduce problem.
       placeholder: 可以留空 | Can be left blank
     validations:
